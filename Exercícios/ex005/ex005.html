@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <link rel="stylesheet" href="../../styles/greystyle.css">
+</head>
+<body>
+    <header>
+        <h1>Trabalhando com números</h1>
+    </header>
+    <main>
+        <button onclick="calcular()">Clique aqui para calcular</button>
+        <section id="res">
+            <p>O resultado vem aqui...</p>
+        </section>
+
+        <script>
+            // o que fica aqui fora é executado SEMPRE que o site carrega
+            window.alert('Seja bem-vindx ao meu site!')
+            // Já função calcular() só vai executar quando o usuário clicar no botão
+            function calcular() {
+                let n1 = Number(window.prompt('Figite um número: '))
+                let res = document.querySelector('section#res')
+
+                res.innerHTML = `<p>O dobro de ${n1} é ${n1*2} e a metade é ${n1/2}!</p>`
+            }
+        </script>
+    </main>    
+</body>
+</html>
